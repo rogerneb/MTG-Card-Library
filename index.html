@@ -10,20 +10,27 @@
 	<!-- Enllaç a l'arxiu CSS Extern -->
 	<link rel="stylesheet" href="css/style.css" type="text/css"/>
 
+	<!-- Enllaç a Jquery -->
+	<script  type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
 	<!-- Enllaç a Javascript Extern -->
 	<script  type="text/javascript" src="js/javascript.js"></script>
+	
 
 	<!-- favicon -->
 	<link href="img/favicon.png" rel="icon" type="image/png" />
 
 	<!-- Títol de la pàgina -->
-	<title>Títol de la pàgina</title>
+	<title>MTGT Card Library</title>
 </head>
 <body>
 	<header></header>
 	<section>
 		<article>
-			<h2>Lorem Ipsum</h2>
+			<h2>Card searcher</h2>
+			<input type="text" id="card_search" value="unsummon"><button onclick="search_card()">Search</button><br>
+			<p id="card-name"></p>
+			<span id="card-img"></span>
 		</article>
 	</section>
 	<footer></footer>
