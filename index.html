@@ -3,36 +3,48 @@
 <head>
 	<!-- Informació Meta -->
 	<meta charset="utf-8"/>
-	<meta name="description" content="Lorem Ipsum">
-	<meta name="keywords" content="Lorem, Ipsum">
-	<meta name="author" content="Lorem Ipsum">
+	<meta name="description" content="MTG-Card_Library">
+	<meta name="keywords" content="MTG, Magic, Magic the gathering, library, scryfall">
+	<meta name="author" content="Roger Nebot">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<!-- GFONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&display=swap" rel="stylesheet">
 
 	<!-- Enllaç a l'arxiu CSS Extern -->
 	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+
+	<!-- CSS MTG FONT -->
+	<link rel="stylesheet" href="mtg-font/css/magic-font.css" type="text/css"/>
 
 	<!-- Enllaç a Jquery -->
 	<script  type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
 	<!-- Enllaç a Javascript Extern -->
-	<script  type="text/javascript" src="js/javascript.js"></script>
+	<script  type="text/javascript" src="js/card-library.js"></script>
 	
 
 	<!-- favicon -->
 	<link href="img/favicon.png" rel="icon" type="image/png" />
 
 	<!-- Títol de la pàgina -->
-	<title>MTGT Card Library</title>
+	<title>MTG Card Library</title>
 </head>
 <body>
 	<header></header>
 	<section>
 		<article>
-			<h2>Card searcher</h2>
+			<h1>MTG Card Library</h1>
 			<input type="text" id="card_search" value="unsummon"><button onclick="search_card()">Search</button><br>
-			<p id="card-name"></p>
 			<span id="card-img"></span>
+			<p id="card-name-cost"><span id="card-name"></span><span id="card-cost"></span></p>
+			<p id="card-type"></p>
+			<p id="card-text"></p>
+			<p id="card-price"><span id="card-price-eur"></span><span id="card-price-usd"></span></p>
 		</article>
 	</section>
-	<footer></footer>
+	<footer>Powered with Scryfall - MTG font by <a href="https://github.com/AlexandreArpin/mtg-font">AlexandreArpin</a></footer>
 </body>
 </html>
