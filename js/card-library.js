@@ -31,7 +31,7 @@ function search_card() {
   });
 }    
   
-
+//SYMBOLS
 function symbols_change(symbol){
   symbol = symbol.replace(/{W}/g, "<i class='mi mi-mana mi-w'></i>") //white
   symbol = symbol.replace(/{U}/g, "<i class='mi mi-mana mi-u'></i>") //blue
@@ -39,6 +39,9 @@ function symbols_change(symbol){
   symbol = symbol.replace(/{R}/g, "<i class='mi mi-mana mi-r'></i>") //red
   symbol = symbol.replace(/{G}/g, "<i class='mi mi-mana mi-g'></i>") //green
   symbol = symbol.replace(/{T}/g, "<i class='mi mi-tap mi-mana'></i>") //tap
+  symbol = symbol.replace(/{X}/g, "<i class='mi mi-mana mi-x'></i>") //X
+  symbol = symbol.replace(/{Y}/g, "<i class='mi mi-mana mi-y'></i>") //Y
+  symbol = symbol.replace(/{Z}/g, "<i class='mi mi-mana mi-z'></i>") //Z
 
   //numbers
   for (n=0; n<20; n++) {
@@ -47,7 +50,9 @@ function symbols_change(symbol){
   
   return symbol;
 }
+//END SYMBOLS
 
+//POWER
 function power_toughness_normalizer(power, toughness){
   if (power != null && toughness != null){
     var power_toughness = power+"/"+toughness;
@@ -56,8 +61,9 @@ function power_toughness_normalizer(power, toughness){
   }
   return power_toughness;
 }
+//END POWER
 
-
+//PRICE
 function price_normalizer(eur, usd) {
   //EURO
   if (eur != null) {
@@ -77,6 +83,7 @@ function price_normalizer(eur, usd) {
   if (card_price_eur == "N/A" && card_price_usd == "N/A") {
     return "Price aprox.: N/A";
   }else{
-    return "Price aprox.: "+card_price_eur+" | "+card_price_usd;
+    return "Price aprox.: <b>"+card_price_eur+"</b> | <b>"+card_price_usd+"</b>";
   }
+  //END PRICE
 }

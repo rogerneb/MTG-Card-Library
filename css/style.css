@@ -1,19 +1,59 @@
 body {
-    font-family: 'Oswald', sans-serif;
-    /*font-weight: 700;*/
-    color: white;
+  font-family: 'Oswald', sans-serif;
+  /*font-weight: 700;*/
+  color: white;
+  background-color: black;
+  margin: 15px;
 
-    background-color: black;
-  
-    /*Can't select text*/
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+  /*Can't select text*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-  img {
-    width: 100%;
-  }
+#search-bar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 15px;
+  background: #012c41c7;
+}
+
+#search-bar input {
+  width: 80%;
+  padding: 5px;
+  font-size: 17pt;
+}
+
+#search-bar button {
+  background-color: #2d60a7;
+  border: 2px solid #f0ffff;
+  border-radius: 2px;
+  color: #ffffff;
+  text-decoration: none;
+}
+#search-bar button:active {
+  background-color: #152b49;;
+}
+
+#content {margin-top: 80px;}
+
+img {
+  width: 100%;
+}
+
+
+
+footer {
+    text-align: center;
+    font-size: 8pt;
+}
+
+footer a {
+  color: white;
+}

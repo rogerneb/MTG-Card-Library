@@ -35,9 +35,11 @@
 <body>
 	<header></header>
 	<section>
-		<article>
-			<h1>MTG Card Library</h1>
-			<input type="text" id="card_search" value="Sorceres queen"><button onclick="search_card()">Search</button><br>
+		<article id="search-bar">
+			<input type="text" id="card_search" value="Banefire">
+			<button onclick="search_card()">Search</button><br>
+		</article>
+		<article id="content">
 			<span id="card-img"></span>
 			<p id="card-name-cost"><b><span id="card-name"></span></b><span id="card-cost"></span></p>
 			<p id="card-type"></p>
@@ -46,6 +48,6 @@
 			<p id="card-price"></span></p>
 		</article>
 	</section>
-	<footer>Powered with Scryfall - MTG font by <a href="https://github.com/AlexandreArpin/mtg-font">AlexandreArpin</a></footer>
+	<footer>Powered with <a href="https://scryfall.com/" target="_blank">Scryfall</a> - MTG font by <a href="https://github.com/AlexandreArpin/mtg-font" target="_blank">AlexandreArpin</a></footer>
 </body>
 </html>
