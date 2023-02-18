@@ -2,7 +2,8 @@ body {
   font-family: 'Oswald', sans-serif;
   /*font-weight: 700;*/
   color: white;
-  background-color: black;
+  background-image:url("../img/background.png");
+  background-color: #000;
   margin: 15px;
 
   /*Can't select text*/
@@ -21,7 +22,7 @@ body {
   right: 0;
   left: 0;
   padding: 15px;
-  background: #012c41c7;
+  background: #421e3ebf;
 }
 
 #search-bar input {
@@ -31,6 +32,7 @@ body {
 }
 
 #search-bar button {
+  width: 20%;
   background-color: #2d60a7;
   border: 2px solid #f0ffff;
   border-radius: 2px;
@@ -40,14 +42,31 @@ body {
 #search-bar button:active {
   background-color: #152b49;;
 }
-
 #content {margin-top: 80px;}
 
+/*ERROR*/
+#error {text-align: center; font-size: 19pt;}
+#error span {font-size: 25pt;}
+#error img {width:50%;}
+/*ERROR*/
 img {
   width: 100%;
 }
 
-
+/*Scryfall button link*/
+#card-link {
+  text-align: center;
+  margin: 30px 15px;
+}
+.scryfall-link {
+  background: #421E3E;
+  color: white;
+  padding: 7px 15px;
+  text-decoration: none;
+  border: 2px solid white;
+  
+}
+/*Scryfall button link*/
 
 footer {
     text-align: center;
@@ -57,3 +76,11 @@ footer {
 footer a {
   color: white;
 }
+
+
+/*LEGALITIES*/
+.lgl {color: white;padding: 2px 5px;}
+.notlegal {background: gray;}
+.banned {background: red;}
+.restricted {background: #80A7B6;}
+.legal {background: #75986E;}

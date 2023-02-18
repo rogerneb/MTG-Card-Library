@@ -36,17 +36,35 @@
 	<header></header>
 	<section>
 		<article id="search-bar">
-			<input type="text" id="card_search" value="Banefire">
+			<input type="text" id="card_search" value="" placeholder="Type a card name...">
 			<button onclick="search_card()">Search</button><br>
 		</article>
 		<article id="content">
+			<p id="error"></p>
 			<span id="card-img"></span>
 			<p id="card-name-cost"><b><span id="card-name"></span></b><span id="card-cost"></span></p>
 			<p id="card-type"></p>
 			<p id="card-text"></p>
 			<p id="card-power-toughness"></p>
-			<p id="card-price"></span></p>
+			<p id="card-price"></p>
 		</article>
+		<article id="card-legality">
+			<hr>
+			<p id="card-legality-standard"></p>
+			<p id="card-legality-pioneer"></p>
+			<p id="card-legality-modern"></p>
+			<p id="card-legality-legacy"></p>
+			<p id="card-legality-vintage"></p>
+			<p id="card-legality-commander"></p>
+			<p id="card-legality-alchemy"></p>
+			<p id="card-legality-explorer"></p>
+			<p id="card-legality-brawl"></p>
+			<p id="card-legality-historic"></p>
+			<p id="card-legality-pauper"></p>
+			<p id="card-legality-penny"></p>
+			<p id="card-legality-modern"></p>
+		</article>
+		<article id="card-link"></article>
 	</section>
 	<footer>Powered with <a href="https://scryfall.com/" target="_blank">Scryfall</a> - MTG font by <a href="https://github.com/AlexandreArpin/mtg-font" target="_blank">AlexandreArpin</a></footer>
 </body>
