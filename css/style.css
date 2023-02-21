@@ -25,9 +25,10 @@ body {
   left: 0;
   padding: 15px;
   background: #421e3ebf;
+  z-index: 100;
 }
 #search-bar input {
-  width: 68%;
+  width: 64%;
   padding: 5px;
   font-size: 17pt;
 }
@@ -41,8 +42,13 @@ body {
   width: 20%;
   background-color: #2d60a7;
 }
-.search-button:active {background-color: #152b49;}
-.close-button {background-color: #a72d2d;}
+.close-button {
+  width: 10%;
+  background-color: #a72d2d;
+}
+.search-button:active, .close-button:active {background: #421E3E;}
+
+
 /*END SEARCH BAR*/
 
 #content {margin: 80px 0 40px 0;}
@@ -103,3 +109,8 @@ footer a {
   margin-right: 15px;
 }
 /*END LEGALITIES*/
+
+/*split mana*/
+.mi-split {
+  color: black;
+}

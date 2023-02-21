@@ -52,6 +52,10 @@ function search_card() {
     $("#card-legality-pauper").html("<span>Pauper:</span> "+card_legality_pauper);
     $("#card-legality-penny").html("<span>Penny:</span> "+card_legality_penny);
 
+    //back to top
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
   })
   .fail(function() { //when the card doesnt exist
     $("#error").html("<img src='img/sad.png' alt='sad face'><br><span id='error-ooops'><b>Oops!</b></span><br>It looks like we can't find the card you're looking for. It may not exist. Check that you typed it correctly and try again."); //error
@@ -77,6 +81,10 @@ function search_card() {
     $("#card-legality-historic").html("");
     $("#card-legality-pauper").html("");
     $("#card-legality-penny").html("");
+
+    //back to top
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   })
 }    
   
@@ -104,10 +112,26 @@ function symbols_change(symbol){
   symbol = symbol.replace(/{G\/P}/g,  "<i class='mi mi-p mi-mana-g'></i>") //green
   symbol = symbol.replace(/{C\/P}/g,  "<i class='mi mi-p mi-mana-c'></i>") //Colorless
   //split mana
-
+  symbol = symbol.replace(/{W\/U}/g,  "<div class='mi-split'><i class='mi mi-w'></i><i class='mi mi-u'></i></div>") //white/blue
+  symbol = symbol.replace(/{W\/B}/g,  "<div class='mi-split'><i class='mi mi-w'></i><i class='mi mi-b'></i></div>") //white/black
+  symbol = symbol.replace(/{U\/B}/g,  "<div class='mi-split'><i class='mi mi-u'></i><i class='mi mi-B'></i></div>") //Blue/Black
+  symbol = symbol.replace(/{U\/R}/g,  "<div class='mi-split'><i class='mi mi-u'></i><i class='mi mi-r'></i></div>") //Blue/Red
+  symbol = symbol.replace(/{B\/R}/g,  "<div class='mi-split'><i class='mi mi-b'></i><i class='mi mi-r'></i></div>") //black/Red
+  symbol = symbol.replace(/{B\/G}/g,  "<div class='mi-split'><i class='mi mi-b'></i><i class='mi mi-g'></i></div>") //black/Red
+  symbol = symbol.replace(/{R\/G}/g,  "<div class='mi-split'><i class='mi mi-r'></i><i class='mi mi-g'></i></div>") //red/green
+  symbol = symbol.replace(/{R\/W}/g,  "<div class='mi-split'><i class='mi mi-r'></i><i class='mi mi-w'></i></div>") //red/white
+  symbol = symbol.replace(/{G\/W}/g,  "<div class='mi-split'><i class='mi mi-g'></i><i class='mi mi-w'></i></div>") //green/white
+  symbol = symbol.replace(/{G\/U}/g,  "<div class='mi-split'><i class='mi mi-g'></i><i class='mi mi-u'></i></div>") //green/blue
+  //Monocolored Hybrid
+  symbol = symbol.replace(/{2\/W}/g,  "<div class='mi-split'><i class='mi mi-2'></i><i class='mi mi-w'></i></div>") //2white
+  symbol = symbol.replace(/{2\/U}/g,  "<div class='mi-split'><i class='mi mi-2'></i><i class='mi mi-u'></i></div>") //2blue
+  symbol = symbol.replace(/{2\/B}/g,  "<div class='mi-split'><i class='mi mi-2'></i><i class='mi mi-b'></i></div>") //2black
+  symbol = symbol.replace(/{2\/R}/g,  "<div class='mi-split'><i class='mi mi-2'></i><i class='mi mi-r'></i></div>") //2red
+  symbol = symbol.replace(/{2\/G}/g,  "<div class='mi-split'><i class='mi mi-2'></i><i class='mi mi-g'></i></div>") //2green
+  
   //numbers
   for (n=0; n<20; n++) {
-    symbol = symbol.replace("{"+n+"}", "<i class='mi mi-mana mi-"+n+"'></i>"); //tap
+    symbol = symbol.replace("{"+n+"}", "<i class='mi mi-mana mi-"+n+"'></i>"); //I must upgrade this regular expression...
   }
   
   return symbol;
@@ -167,5 +191,5 @@ function get_legality(legal){
 
 //CLOSE APP
 function close_app() {
-  alert("not implemented now...");
+  alert("not implemented yet...");
 }
