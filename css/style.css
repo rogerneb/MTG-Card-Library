@@ -15,8 +15,10 @@ body {
   user-select: none;
 }
 
+/*SEARCH BAR*/
 #search-bar {
   display: flex;
+  justify-content: space-around;
   position: fixed;
   top: 0;
   right: 0;
@@ -24,25 +26,26 @@ body {
   padding: 15px;
   background: #421e3ebf;
 }
-
 #search-bar input {
-  width: 80%;
+  width: 68%;
   padding: 5px;
   font-size: 17pt;
 }
-
-#search-bar button {
-  width: 20%;
-  background-color: #2d60a7;
+.search-bar-button {
   border: 2px solid #f0ffff;
   border-radius: 2px;
   color: #ffffff;
   text-decoration: none;
 }
-#search-bar button:active {
-  background-color: #152b49;;
+.search-button {
+  width: 20%;
+  background-color: #2d60a7;
 }
-#content {margin-top: 80px;}
+.search-button:active {background-color: #152b49;}
+.close-button {background-color: #a72d2d;}
+/*END SEARCH BAR*/
+
+#content {margin: 80px 0 40px 0;}
 
 /*ERROR*/
 #error {text-align: center; font-size: 19pt;}
@@ -56,7 +59,7 @@ img {
 /*Scryfall button link*/
 #card-link {
   text-align: center;
-  margin: 30px 15px;
+  margin: 45px 15px;
 }
 .scryfall-link {
   background: #421E3E;
@@ -79,8 +82,21 @@ footer a {
 
 
 /*LEGALITIES*/
-.lgl {color: white;padding: 2px 5px;}
+.lgl {color: white;padding: 1px 3px; text-align: center;}
 .notlegal {background: gray;}
 .banned {background: red;}
 .restricted {background: #80A7B6;}
 .legal {background: #75986E;}
+
+#card-legality {
+  display: flex;
+  justify-content: space-between;
+}
+#card-legality p {
+  margin: 0 0 2px 0;
+  display: flex;
+}
+#card-legality span {
+  width: 70px;
+}
+/*END LEGALITIES*/

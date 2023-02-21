@@ -36,8 +36,9 @@
 	<header></header>
 	<section>
 		<article id="search-bar">
-			<input type="text" id="card_search" value="" placeholder="Type a card name...">
-			<button onclick="search_card()">Search</button><br>
+			<input type="text" id="card_search" value="phyrexian metamorf" placeholder="Type a card name...">
+			<button onclick="search_card()" class="search-bar-button search-button">Search</button><br>
+			<button onclick="close_app()" class="search-bar-button close-button">X</button><br>
 		</article>
 		<article id="content">
 			<p id="error"></p>
@@ -49,20 +50,23 @@
 			<p id="card-price"></p>
 		</article>
 		<article id="card-legality">
-			<hr>
-			<p id="card-legality-standard"></p>
-			<p id="card-legality-pioneer"></p>
-			<p id="card-legality-modern"></p>
-			<p id="card-legality-legacy"></p>
-			<p id="card-legality-vintage"></p>
-			<p id="card-legality-commander"></p>
-			<p id="card-legality-alchemy"></p>
-			<p id="card-legality-explorer"></p>
-			<p id="card-legality-brawl"></p>
-			<p id="card-legality-historic"></p>
-			<p id="card-legality-pauper"></p>
-			<p id="card-legality-penny"></p>
-			<p id="card-legality-modern"></p>
+			<div>
+				<p id="card-legality-standard"></p>
+				<p id="card-legality-pioneer"></p>
+				<p id="card-legality-modern"></p>
+				<p id="card-legality-legacy"></p>
+				<p id="card-legality-vintage"></p>
+				<p id="card-legality-commander"></p>
+			</div>
+			<div>
+				<p id="card-legality-alchemy"></p>
+				<p id="card-legality-explorer"></p>
+				<p id="card-legality-brawl"></p>
+				<p id="card-legality-historic"></p>
+				<p id="card-legality-pauper"></p>
+				<p id="card-legality-penny"></p>
+				<p id="card-legality-modern"></p>
+			</div>
 		</article>
 		<article id="card-link"></article>
 	</section>
