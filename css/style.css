@@ -50,7 +50,6 @@ body {
 
 
 /*END SEARCH BAR*/
-
 #content {margin: 80px 0 40px 0;}
 
 /*ERROR*/
@@ -96,7 +95,7 @@ footer a {
 
 #card-legality {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 #card-legality p {
   margin: 0 0 2px 0;
